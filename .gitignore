@@ -6,5 +6,8 @@ ca/private
 ca/index.*
 ca/serial*
 
+# ignoring changes to openssl.cnf as original is in openssl.conf
+ca/openssl.cnf
+
 # helper ignores
 helper/*

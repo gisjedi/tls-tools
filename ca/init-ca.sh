@@ -5,6 +5,9 @@ chmod 700 private
 touch index.txt
 echo 1000 > serial
 
+# Shim CA conf by the relative location
+cat openssl.conf | sed 's^/home/ubuntu/workspace^'`cd .. && pwd && cd ca`'^g' > openssl.cnf
+
 # Generate certificate authority private key
 openssl genrsa -aes256 -out private/ca.key.pem 4096
 

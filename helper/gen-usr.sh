@@ -11,7 +11,7 @@ openssl req -subj '/C=US/ST=AllYourBase/O=BelongToUs/CN=$1' \
        -out $1/$1.csr
        
 # Sign cert with CA key
-openssl ca -config ../ca/openssl.conf \
+openssl ca -config ../ca/openssl.cnf \
       -extensions usr_cert -days 375 -notext -md sha256 \
       -in $1/$1.csr \
       -out $1/$1.crt
