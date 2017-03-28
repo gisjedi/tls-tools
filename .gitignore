@@ -1,0 +1,10 @@
+# ca ignores
+ca/certs
+ca/crl
+ca/newcerts
+ca/private
+ca/index.*
+ca/serial*
+
+# helper ignores
+helper/*
